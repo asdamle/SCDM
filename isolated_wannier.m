@@ -1,6 +1,6 @@
 function [] = isolated_wannier(fin,fout)
 
-% assumes the interpolation will be done with all the provided bands.
+% nwan must be integer, no threshold option
 
 % Read basic information
 fid=fopen(fin,'r');
@@ -22,9 +22,7 @@ end
 
 disp('Computing columns...');
 [~, ~, perm]=qr(Psi','vector');  
-Neig = size(Psi,2);
-cols = perm(1:Neig);
-
+cols = perm(1:nwan);
 
 [Xs,Ys,Zs] = ndgrid(0:nx-1,0:ny-1,0:nz-1);
 Xs = Xs/nx;
