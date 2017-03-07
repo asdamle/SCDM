@@ -1,0 +1,3 @@
+#bands #kpoints #wannier_functions   : this line is always necessary
+eigenvalue_file #mu #sigma           : only for valance/conduction, ignored otherwise
+kpoint_list                          : contain kpoints in rel/crystal coords
