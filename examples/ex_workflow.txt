@@ -1,7 +1,7 @@
 Example workflow for using this interface
 
 1) Run QuantumESPRESSO SCF calculation
-2) Run 
+2) Run  
 3)
 4)
 5)
