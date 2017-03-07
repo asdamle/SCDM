@@ -1,9 +1,9 @@
-function [] = isolated_wannier(fout)
+function [] = isolated_wannier(fin,fout)
 
 % assumes the interpolation will be done with all the provided bands.
 
 % Read basic information
-fid=fopen('scdmk.in','r');
+fid=fopen(fin,'r');
 nband=fscanf(fid,'%d',1);
 nk=fscanf(fid,'%d',1);
 nwan=fscanf(fid,'%d',1);

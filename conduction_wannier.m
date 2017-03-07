@@ -1,10 +1,10 @@
-function [] = conduction_wannier(fout)
+function [] = conduction_wannier(fin,fout)
 
 % if nwan >= 1 use as number of wannier functions to choose
 % if nwan < 1 use as a relative threshold on diagonal of R
 
 % Read basic information
-fid=fopen('scdmk.in','r');
+fid=fopen(fin,'r');
 nband=fscanf(fid,'%d',1);
 nk=fscanf(fid,'%d',1);
 nwan=fscanf(fid,'%g',1);
