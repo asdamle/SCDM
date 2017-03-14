@@ -1,7 +1,20 @@
 Example workflow for using this interface
 
-1) Run QuantumESPRESSO SCF calculation
-2) Run  
-3)
-4)
-5)
+An explict example is inclued in the examples directory. This includes example input files for Wannier90 and the SCDM Matlab code.
+
+
+1) Run QuantumESPRESSO SCF calculation 
+
+2) Run Wannier90 to generate input files from .win file
+
+3) Run PW2Wannier to generate UNK files (output orbitals)
+
+4) Run SCDM Matlab code to generate desired .amn file
+
+	- example input files are given for all the supported cases (isolated and entangled)
+
+5) Run Run Wannier90 with or without any iterations
+
+6) Use Geninterp routines from postw90 to perform band structure interpolation on the desired grid. 
+
+	- gen_kpts.m may be used to generate paths through the  Brillouin Zone and the required .dat file.
