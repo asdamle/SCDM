@@ -85,16 +85,8 @@ if nargin > 3
     temp = [kpts wgts];
     fprintf(fid,'%7.5f %7.5f %7.5f %7.5f\n',temp');
     fclose(fid);
-end
-    
-    
-    
-    
-    
-    
-    
-    
-    
+end 
+ 
     
     
 end

@@ -70,18 +70,19 @@ for k = 1 : nk
 end
 
 % Write the overlap matrix .amn that can be called by Wannier90
-disp('Writing amn file...');
-fid   = fopen(fout, 'w');
-fprintf(fid,'Input from SCDM-k\n');
-fprintf(fid,'  %10d  %10d  %10d\n', nband, nk, nwan);
-for k= 1 : nk
-  for j = 1 : nwan % check
-    for i = 1 : nband % check  
-      fprintf(fid, '%5d%5d%5d  %16.12f  %16.12f\n', ...
-        i, j, k, real(Amn{k}(i,j)), imag(Amn{k}(i,j)));
-    end
-  end
-end
-fclose(fid);
+write_amn(Amn,nk,fout);
+% disp('Writing amn file...');
+% fid   = fopen(fout, 'w');
+% fprintf(fid,'Input from SCDM-k\n');
+% fprintf(fid,'  %10d  %10d  %10d\n', nband, nk, nwan);
+% for k= 1 : nk
+%   for j = 1 : nwan % check
+%     for i = 1 : nband % check  
+%       fprintf(fid, '%5d%5d%5d  %16.12f  %16.12f\n', ...
+%         i, j, k, real(Amn{k}(i,j)), imag(Amn{k}(i,j)));
+%     end
+%   end
+% end
+% fclose(fid);
 
 
